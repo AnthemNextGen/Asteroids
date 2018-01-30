@@ -10,3 +10,11 @@ A Multiplayer Version of the Asteroid Game
 3. Commit your work and push to upstream
 
 4. Open a Pull Request for review.
+
+## Run
+
+  npm install
+
+  npm start
+
+  
