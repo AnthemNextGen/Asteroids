@@ -11,6 +11,10 @@ app.get('/', function(req,res){
 
 socket.on('connection', function(sock){
     console.log('A Player Connected...');
+    sock.on('join', function(user){
+      console.log(user + "  Connected..");
+      socket.emit('join', user);
+    });
 });
 
 http.listen(3000, function(){
