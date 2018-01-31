@@ -17,13 +17,9 @@ function setScene(scene){
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.beginPath();
-<<<<<<< HEAD
   ctx.arc(100, 75, 50, 0, 2 * Math.PI);
   ctx.fillStyle = 'red';
   ctx.fill();
-=======
-  ctx.arc(100, 75, 50, 0, 2 * Math.PI);
->>>>>>> Elisha-Amos
   ctx.stroke();
 }
 
