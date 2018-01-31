@@ -43,6 +43,7 @@ function StartGame(scene){
   scene.addEventListener('click', function(){
       alert('GAME OVER SCREEN');
       endGame();
+      window.location.href="/";
   });
   var ctx = scene.getContext('2d');
   ctx.canvas.width = window.innerWidth;
