@@ -42,6 +42,7 @@ function initScene(scene){
 }
 
 function StartGame(scene){
+  var socket = io();
   scene.addEventListener('click', function(){
       alert('GAME OVER SCREEN');
       endGame();

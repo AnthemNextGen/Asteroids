@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "jasmine": "^2.9.0"
+    "jasmine": "^2.9.0",
+    "socket.io": "latest"
   }
 }
