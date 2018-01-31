@@ -43,6 +43,11 @@ function initScene(scene){
 
 function StartGame(scene){
   var socket = io();
+  var user = prompt('Enter Player Name');
+  socket.emit('join', user);
+  socket.on('join', function(user){
+    alert(user + "  Connected");
+  });
   scene.addEventListener('click', function(){
       alert('GAME OVER SCREEN');
       endGame();
