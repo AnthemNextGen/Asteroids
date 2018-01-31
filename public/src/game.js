@@ -18,6 +18,11 @@ function setScene(scene){
   ctx.canvas.height = window.innerHeight;
   ctx.beginPath();
   ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+<<<<<<< HEAD
+=======
+  ctx.fillStyle = 'red';
+  ctx.fill();
+>>>>>>> Elisha-Amos
   ctx.stroke();
 }
 
