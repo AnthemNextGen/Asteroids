@@ -50,7 +50,7 @@ function StartGame(scene){
   var ctx = scene.getContext('2d');
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
-  ctx.fillStyle = 'aqua';
+  ctx.fillStyle = 'teal';
   ctx.fillRect(20, 20, 150, 100);
 }
 
