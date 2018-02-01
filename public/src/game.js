@@ -17,7 +17,13 @@ function setScene(scene){
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.beginPath();
+<<<<<<< HEAD
   ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+  ctx.fillStyle = 'red';
+  ctx.fill();
+=======
+  ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+>>>>>>> Elisha-Amos
   ctx.stroke();
 }
 
@@ -40,14 +46,21 @@ function initScene(scene){
 }
 
 function StartGame(scene){
+  var socket = io();
+  var user = prompt('Enter Player Name');
+  socket.emit('join', user);
+  socket.on('join', function(user){
+    alert(user + "  Connected");
+  });
   scene.addEventListener('click', function(){
       alert('GAME OVER SCREEN');
       endGame();
-      window.location.href="/";
+
   });
   var ctx = scene.getContext('2d');
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
+  ctx.fillStyle = 'aqua';
   ctx.fillRect(20, 20, 150, 100);
 }
 
