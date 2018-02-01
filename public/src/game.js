@@ -13,10 +13,8 @@ function showScene(scene) {
 
 }
 
-<<<<<<< HEAD
 function setScene(scene){
   var ctx = requestContext(scene);
-=======
 function play(music) {
   if(music){
     music.play();
@@ -37,7 +35,6 @@ function pause(music) {
 
 function setScene(scene) {
   var ctx = scene.getContext('2d');
->>>>>>> Elisha-Amos
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.beginPath();
