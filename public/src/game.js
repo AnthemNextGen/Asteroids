@@ -9,24 +9,24 @@ function hideScene(mode){
 
 function showScene(scene){
   scene.style.display = 'block';
+
 }
 
 function setScene(scene){
-
-  var ctx = scene.getContext('2d');
+  var ctx = requestContext(scene);
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.beginPath();
-<<<<<<< HEAD
-  ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-  ctx.fillStyle = 'red';
+  ctx.font = "30px Arial";
+  ctx.fillStyle = 'teal';
+  ctx.fillText("ASTEROID NEXTGEN",innerWidth/3,innerHeight/5);
+  ctx.fillRect(innerWidth/6,300, 200,75);
+  ctx.fillRect(850,300, 200,75);
   ctx.fill();
-=======
-  ctx.arc(100, 75, 50, 0, 2 * Math.PI);
->>>>>>> Elisha-Amos
   ctx.stroke();
+  //generateCircles(splashScreen);
+  //animate();
 }
-
 
 window.onload = function(){
     hideScene(game);
@@ -57,11 +57,12 @@ function StartGame(scene){
       endGame();
 
   });
-  var ctx = scene.getContext('2d');
+  var ctx = requestContext(scene);
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.fillStyle = 'aqua';
   ctx.fillRect(20, 20, 150, 100);
+  generateCircles(ctx);
 }
 
 function endGame(){
