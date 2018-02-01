@@ -12,10 +12,12 @@ function showScene(scene) {
   scene.style.display = 'block';
 
 }
-function play(music){
+
+function play(music) {
   play();
 }
-function pause(music){
+
+function pause(music) {
   pause();
 }
 
