@@ -12,6 +12,12 @@ function showScene(scene) {
   scene.style.display = 'block';
 
 }
+function play(music){
+  play();
+}
+function pause(music){
+  pause();
+}
 
 function setScene(scene) {
   var ctx = scene.getContext('2d');
