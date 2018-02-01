@@ -13,7 +13,7 @@ function showScene(scene){
 }
 
 function setScene(scene){
-  var ctx = scene.getContext('2d');
+  var ctx = requestContext(scene);
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.beginPath();
@@ -24,15 +24,8 @@ function setScene(scene){
   ctx.fillRect(850,300, 200,75);
   ctx.fill();
   ctx.stroke();
-  generateCircles(ctx);
-}
-
-function generateCircles(ctx){
-    var posX = Math.random()*innerWidth;
-    var posY = Math.random()*innerHeight;
-    ctx.arc(posX++,posY++,30,0, Math.PI*2, false);
-    ctx.strokeStyle = 'red';
-    ctx.stroke();
+  //generateCircles(splashScreen);
+  //animate();
 }
 
 window.onload = function(){
@@ -64,7 +57,7 @@ function StartGame(scene){
       endGame();
 
   });
-  var ctx = scene.getContext('2d');
+  var ctx = requestContext(scene);
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   ctx.fillStyle = 'aqua';
