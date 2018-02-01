@@ -18,11 +18,21 @@ function setScene(scene){
   var ctx = requestContext(scene);
 =======
 function play(music) {
-  play();
+  if(music){
+    music.play();
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function pause(music) {
-  pause();
+  if(music){
+    music.pause();
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function setScene(scene) {
@@ -43,7 +53,7 @@ function setScene(scene) {
 }
 
 window.onload = function () {
-  music.play();
+  play(music);
   hideScene(game)
   hideScene(game_over);
   setScene(splashScreen);
@@ -53,7 +63,7 @@ window.onload = function () {
 function initScene(scene) {
   scene.addEventListener('click', function () {
     alert('GAME SCREEN');
-    music.pause();
+    pause(music);
     hideScene(scene);
     showScene(game);
     StartGame(game);
@@ -63,12 +73,12 @@ function initScene(scene) {
 
 function StartGame(scene) {
   var socket = io();
-  music.play();
+  play(music);
   var user = prompt('Enter Player Name');
   socket.emit('join', user);
   socket.on('join', function (user) {
     alert(user + "  Connected");
-    music.pause();
+    pause(music);
   });
   scene.addEventListener('click', function () {
     alert('GAME OVER SCREEN');
@@ -84,7 +94,7 @@ function StartGame(scene) {
 }
 
 function endGame() {
-  music.play();
+  play(music);
   hideScene(game);
   hideScene(splashScreen);
   showScene(game_over);
