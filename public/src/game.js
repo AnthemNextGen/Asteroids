@@ -12,27 +12,6 @@ function showScene(scene) {
   scene.style.display = 'block';
 
 }
-
-function setScene(scene){
-  var ctx = requestContext(scene);
-function play(music) {
-  if(music){
-    music.play();
-    return true;
-  }else{
-    return false;
-  }
-}
-
-function pause(music) {
-  if(music){
-    music.pause();
-    return true;
-  }else{
-    return false;
-  }
-}
-
 function setScene(scene) {
   var ctx = scene.getContext('2d');
   ctx.canvas.width = window.innerWidth;

@@ -27,3 +27,25 @@ function generateCircles(scene){
 function requestContext(scene){
   return scene.getContext('2d');
 }
+
+function setScene(scene){
+  var ctx = requestContext(scene);
+}
+
+function play(music) {
+  if(music){
+    music.play();
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function pause(music) {
+  if(music){
+    music.pause();
+    return true;
+  }else{
+    return false;
+  }
+}
