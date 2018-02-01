@@ -50,7 +50,7 @@ function initScene(scene){
       music.pause();
       hideScene(scene);
       showScene(game);
-      StartGame(game, music.pause());
+      StartGame(game);
 
   });
 }
