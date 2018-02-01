@@ -38,20 +38,8 @@ function setScene(scene) {
   ctx.fillRect(850, 300, 200, 75);
   ctx.fill();
   ctx.stroke();
-<<<<<<< HEAD
   //generateCircles(splashScreen);
   //animate();
-=======
-  generateCircles(ctx);
-}
-
-function generateCircles(ctx) {
-  var posX = Math.random() * innerWidth;
-  var posY = Math.random() * innerHeight;
-  ctx.arc(posX++, posY++, 30, 0, Math.PI * 2, false);
-  ctx.strokeStyle = 'red';
-  ctx.stroke();
->>>>>>> Elisha-Amos
 }
 
 window.onload = function () {
