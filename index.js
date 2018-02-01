@@ -17,6 +17,6 @@ socket.on('connection', function(sock){
     });
 });
 
-http.listen(3000, function(){
+exports.server = http.listen(3000, function(){
   console.log('App running at: http://localhost:3000');
 });
