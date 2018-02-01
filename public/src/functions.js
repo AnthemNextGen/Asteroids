@@ -27,3 +27,19 @@ function generateCircles(scene){
 function requestContext(scene){
   return scene.getContext('2d');
 }
+
+// Test function. DO NOT USE
+function createCircle(scene, x, y, radius){
+  var ctx = requestContext(scene);
+  return {
+    draw: function(){
+        ctx.beginPath();
+        ctx.arc(x,y,radius,Math.PI*2, false);
+        ctx.strokeStyle = "green";
+        ctx.stroke();
+    },
+    update(){
+
+    }
+  }
+}
