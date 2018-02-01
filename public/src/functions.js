@@ -43,3 +43,8 @@ function createCircle(scene, x, y, radius){
     }
   }
 }
+
+// For Unit testing only
+function drawShape(){
+  return true;
+}
