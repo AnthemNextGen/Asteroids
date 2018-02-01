@@ -3,7 +3,6 @@ var game = document.getElementById('main_game');
 var game_over = document.getElementById('game_over');
 var music = document.getElementById('music');
 
-
 function hideScene(mode) {
   mode.style.display = 'none';
 }

@@ -1,4 +1,3 @@
-
 var x = 200;
 function animate(){
   var ctx = requestContext(splashScreen);
