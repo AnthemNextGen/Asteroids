@@ -4,11 +4,6 @@ var http = require('http').Server(app);
 var socket = require('socket.io')(http);
 app.use('/', express.static(__dirname + '/public'));
 
-app.get('/', function(req,res){
-  res.sendFile(__dirname + 'public/index.html');
-});
-
-
 socket.on('connection', function(sock){
     console.log('A Player Connected...');
     sock.on('join', function(user){
