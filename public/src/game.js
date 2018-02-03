@@ -19,13 +19,17 @@ function setScene(scene){
   ctx.beginPath();
   ctx.font = "30px Arial";
   ctx.fillStyle = 'teal';
-  ctx.fillText("ASTEROID NEXTGEN",innerWidth/3,innerHeight/5);
+  //ctx.fillText("ASTEROID NEXTGEN",innerWidth/3,innerHeight/5);
   ctx.fillRect(innerWidth/6,300, 200,75);
   ctx.fillRect(850,300, 200,75);
   ctx.fill();
   ctx.stroke();
+  drawText(splashScreen, "ASTROID NEXTGEN", innerWidth/3, innerHeight/5);
+  drawText(splashScreen, "PRESS SPACE KEY TO START GAME", innerWidth/5,innerHeight/2);
   //generateCircles(splashScreen);
   //animate();
+  ctx.fillStyle = 'teal';
+  drawShip(splashScreen);   // Draw ship on Splash screen
 }
 
 window.onload = function(){
@@ -36,11 +40,12 @@ window.onload = function(){
 }
 
 function initScene(scene){
-  scene.addEventListener('click', function(){
-      alert('GAME SCREEN');
-      hideScene(scene);
-      showScene(game);
-      StartGame(game);
+  document.addEventListener('keyup', function(event){
+      if(event.keyCode == 32){
+        hideScene(scene);
+        showScene(game);
+        StartGame(game);
+    }
 
   });
 }
@@ -51,18 +56,18 @@ function StartGame(scene){
   socket.emit('join', user);
   socket.on('join', function(user){
     alert(user + "  Connected");
+    //drawShip(main_game);
   });
   scene.addEventListener('click', function(){
       alert('GAME OVER SCREEN');
       endGame();
 
   });
-  var ctx = requestContext(scene);
+  var ctx = requestContext(main_game);
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
-  ctx.fillStyle = 'aqua';
-  ctx.fillRect(20, 20, 150, 100);
-  generateCircles(ctx);
+  ctx.fillStyle = 'teal';
+  drawShip(main_game);
 }
 
 function endGame(){
