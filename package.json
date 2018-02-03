@@ -4,7 +4,7 @@
   "description": "A Multiplayer version of the Asteroid game",
   "main": "index.js",
   "scripts": {
-    "unittest" : "jasmine",
+    "unittest": "jasmine",
     "start": "start http://localhost:3000 & node index.js",
     "test": "start http://localhost:3000/SpecRunner.html & node index.js"
   },
