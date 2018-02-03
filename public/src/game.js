@@ -56,12 +56,11 @@ function StartGame(scene) {
   socket.emit('join', user);
   socket.on('join', function (user) {
     alert(user + "  Connected");
-    pauseMusic(url);
     //drawShip(main_game);
+    pauseMusic(url); // pause music will be called after ship is drawn and game ready to start
   });
   scene.addEventListener('click', function () {
     alert('GAME OVER SCREEN');
-    playMusic(url);
     endGame();
 
   });
@@ -73,6 +72,7 @@ function StartGame(scene) {
 }
 
 function endGame() {
+  playMusic(url);
   hideScene(game);
   hideScene(splashScreen);
   showScene(game_over);

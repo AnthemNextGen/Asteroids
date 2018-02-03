@@ -166,6 +166,7 @@ function drawText(scene, text, posX, posY) {
 var url = "./assets/videogame2.wav";
 var audio = document.createElement('audio');
 audio.src = url;
+
 function playMusic(url) {
   if (url) {
     audio.loop = true;
