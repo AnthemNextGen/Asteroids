@@ -172,3 +172,26 @@ function drawText(scene, text, posX, posY) {
       return text;
   }
 }
+
+var url = "./assets/videogame2.wav";
+var audio = document.createElement('audio');
+audio.src = url;
+
+function playMusic(url) {
+  if (url) {
+    audio.loop = true;
+    audio.play();
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function pauseMusic(url) {
+  if (url) {
+    audio.pause();
+    return true;
+  } else {
+    return false;
+  }
+}
