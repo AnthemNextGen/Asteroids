@@ -25,7 +25,9 @@ function generateCircles(scene){
 
 
 function requestContext(scene){
-  return scene.getContext('2d');
+  if(scene.getContext)
+    return scene.getContext('2d');
+  return false;
 }
 
 // Test function. DO NOT USE
@@ -47,4 +49,116 @@ function createCircle(scene, x, y, radius){
 // For Unit testing only
 function drawShape(){
   return true;
+}
+
+// Utility functions for Primitive shapes
+
+function drawShip(scene, n){
+    if(scene.getContext){
+      var ctx = requestContext(scene);
+      ctx.beginPath();
+      ctx.moveTo(50,50);
+      ctx.lineTo(50, 100);
+      ctx.lineTo(100,50);
+      ctx.fill();
+      return n;
+    }
+
+}
+
+function drawHeart(scene, n){
+  if(scene.getContext){
+    var ctx = requestContext(scene);
+    ctx.beginPath();
+    ctx.moveTo(350, 400);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    ctx.fill();
+  }
+}
+
+function drawMessage(scene){
+  if(scene.getContext){
+    var ctx = requestContext(scene);
+    ctx.beginPath();
+    ctx.moveTo(75, 25);
+    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.quadraticCurveTo(25, 100, 50, 100);
+    ctx.quadraticCurveTo(50, 120, 30, 125);
+    ctx.quadraticCurveTo(60, 120, 65, 100);
+    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+    ctx.quadraticCurveTo(125, 25, 75, 25);
+    ctx.fillStyle = 'teal';
+    ctx.fill();
+    //ctx.stroke();
+    return true;
+  }
+}
+
+function drawSpace(scene) {
+  if(scene.getContext){
+      var ctx = requestContext(scene);
+      var lingrad = ctx.createLinearGradient(0, 0, 0, innerHeight);
+      lingrad.addColorStop(0, '#00ABEB');
+      lingrad.addColorStop(0.8, '#fff');
+      ctx.fillStyle = lingrad;
+      ctx.fillRect(0, 0, innerWidth, innerHeight);
+      return scene;
+  }
+}
+
+
+
+// Debug this later
+function drawPlanet(scene) {
+  if(scene.getContext){
+      var ctx = requestContext(scene);
+      var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+      radgrad3.addColorStop(0, '#00C9FF');
+      radgrad3.addColorStop(0.8, 'orange');
+      radgrad3.addColorStop(1, 'rgba(0, 201, 255, 0)');
+      ctx.fillStyle = radgrad3;
+      //ctx.fillRect(450, 150, 150, 150);
+      ctx.fillStyle = radgrad2;
+      return true;
+    }
+
+}
+
+function drawBackground(scene) {
+  if(scene.getContext){
+      var ctx = requestContext(scene);
+      var img = new Image();
+      img.src = 'path to image in assets folder';
+      img.onload = function() {
+      var ptrn = ctx.createPattern(img, 'repeat');
+      ctx.fillStyle = ptrn;
+      ctx.fillRect(0, 0, 150, 150);
+
+    }
+  }
+}
+
+/*
+    Draws Triangular ship at position specified at posX, posY.
+    posX and posY should always be fractions of window.innerWidth
+    amd window.innerHeight respectively to allow for responsiveness.
+*/
+
+function drawText(scene, text, posX, posY) {
+  if(scene.getContext){
+      var ctx = requestContext(scene);
+      ctx.shadowOffsetX = 2;
+      ctx.shadowOffsetY = 2;
+      ctx.shadowBlur = 2;
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+
+      ctx.font = '40px Times New Roman';
+      ctx.fillStyle = 'Black';
+      ctx.strokeText(text, posX, posY);
+  }
 }
