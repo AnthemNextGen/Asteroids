@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-describe('Should test all', function () {
-  it('Should always pass', function () {
-    expect(true).toBe(true);
-  });
-
-  it('Draw shape on screen', function () {
-=======
 describe('Should test all Splash screen components', function(){
 
   it('Should always pass', function(){
@@ -17,7 +9,6 @@ describe('Should test all Splash screen components', function(){
   });
 
   it('Draw shape on screen', function(){
->>>>>>> master
     expect(drawShape()).toBe(true);
   });
 
