@@ -4,13 +4,15 @@
   "description": "A Multiplayer version of the Asteroid game",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "jasmine"
+    "unittest": "jasmine",
+    "start": "start http://localhost:3000 & node index.js",
+    "test": "start http://localhost:3000/SpecRunner.html & node index.js"
   },
   "author": "Anthem NextGen",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "jasmine": "^2.9.0"
+    "jasmine": "^2.9.0",
+    "socket.io": "latest"
   }
 }

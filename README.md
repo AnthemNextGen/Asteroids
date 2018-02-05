@@ -15,6 +15,8 @@ A Multiplayer Version of the Asteroid Game
 
   npm install
 
-  npm start
+  npm run unittest
 
+  npm run test
   
+  npm start
