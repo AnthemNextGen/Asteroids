@@ -163,6 +163,8 @@ function drawText(scene, text, posX, posY) {
   }
 }
 
+//Music play and pause functions
+
 var url = "./assets/videogame2.wav";
 var audio = document.createElement('audio');
 audio.src = url;
