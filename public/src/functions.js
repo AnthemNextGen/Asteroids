@@ -1,4 +1,13 @@
 
+function hideScene(mode){
+  mode.style.display = 'none';
+}
+
+function showScene(scene){
+  scene.style.display = 'block';
+
+}
+
 var x = 200;
 function animate(){
   var ctx = requestContext(splashScreen);
@@ -160,5 +169,6 @@ function drawText(scene, text, posX, posY) {
       ctx.font = '40px Times New Roman';
       ctx.fillStyle = 'Black';
       ctx.strokeText(text, posX, posY);
+      return text;
   }
 }
