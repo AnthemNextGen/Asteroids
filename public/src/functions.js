@@ -1,4 +1,13 @@
 
+function hideScene(mode){
+  mode.style.display = 'none';
+}
+
+function showScene(scene){
+  scene.style.display = 'block';
+
+}
+
 var x = 200;
 function animate(){
   var ctx = requestContext(splashScreen);
@@ -160,5 +169,29 @@ function drawText(scene, text, posX, posY) {
       ctx.font = '40px Times New Roman';
       ctx.fillStyle = 'Black';
       ctx.strokeText(text, posX, posY);
+      return text;
+  }
+}
+
+var url = "./assets/videogame2.wav";
+var audio = document.createElement('audio');
+audio.src = url;
+
+function playMusic(url) {
+  if (url) {
+    audio.loop = true;
+    audio.play();
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function pauseMusic(url) {
+  if (url) {
+    audio.pause();
+    return true;
+  } else {
+    return false;
   }
 }
