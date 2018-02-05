@@ -2,15 +2,6 @@ var splashScreen = document.getElementById('splash');
 var game = document.getElementById('main_game');
 var game_over = document.getElementById('game_over');
 
-function hideScene(mode) {
-  mode.style.display = 'none';
-}
-
-function showScene(scene) {
-  scene.style.display = 'block';
-
-}
-
 function setScene(scene) {
   var ctx = requestContext(scene);
   ctx.canvas.width = window.innerWidth;
@@ -19,8 +10,9 @@ function setScene(scene) {
   ctx.font = "30px Arial";
   ctx.fillStyle = 'teal';
   //ctx.fillText("ASTEROID NEXTGEN",innerWidth/3,innerHeight/5);
-  ctx.fillRect(innerWidth / 6, 300, 200, 75);
-  ctx.fillRect(850, 300, 200, 75);
+  ctx.fillRect(innerWidth/6,400, 200,75);
+  ctx.closePath();
+  ctx.fillRect(850,400, 200,75);
   ctx.fill();
   ctx.stroke();
   drawText(splashScreen, "ASTROID NEXTGEN", innerWidth / 3, innerHeight / 5);
