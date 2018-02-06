@@ -78,7 +78,5 @@ function endGame() {
 }
 
 function hideVideo(){
-  //alert("inside hide")
-  //$("#video").hide()
   document.getElementById("video").style.display = "none"
 }
