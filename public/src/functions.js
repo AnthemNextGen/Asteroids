@@ -158,16 +158,17 @@ function drawBackground(scene) {
     amd window.innerHeight respectively to allow for responsiveness.
 */
 
-function drawText(scene, text, posX, posY) {
+function drawText(scene, text, posX, posY, font) {
   if(scene.getContext){
       var ctx = requestContext(scene);
+      var font = font;
       ctx.shadowOffsetX = 2;
       ctx.shadowOffsetY = 2;
-      ctx.shadowBlur = 2;
-      ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
-
-      ctx.font = '40px Times New Roman';
-      ctx.fillStyle = 'Black';
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
+      ctx.font = font;
+      // ctx.fillStyle = "black";
+      ctx.strokeStyle = "white";
       ctx.strokeText(text, posX, posY);
       return text;
   }
