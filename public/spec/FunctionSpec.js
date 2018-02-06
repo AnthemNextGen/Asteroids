@@ -11,4 +11,14 @@ describe('Should test all Splash screen components', function(){
   it('Draw shape on screen', function(){
     expect(drawShape()).toBe(true);
   });
+
+  it('Play Music', function () {
+    expect(playMusic(url)).toBeTruthy();
+  });
+
+  it('Pause Music', function () {
+    expect(pauseMusic(url)).toBeTruthy();
+  });
+
 });
+
