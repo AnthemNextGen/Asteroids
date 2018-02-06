@@ -2,6 +2,8 @@ var splashScreen = document.getElementById('splash');
 var game = document.getElementById('main_game');
 var game_over = document.getElementById('game_over');
 
+var video = document.getElementById('video')
+
 function setScene(scene) {
   var ctx = requestContext(scene);
   ctx.canvas.width = window.innerWidth;
@@ -39,7 +41,9 @@ function initScene(scene) {
     if (event.keyCode == 32) {
       hideScene(scene);
       showScene(game);
+      hideElement(video)
       StartGame(game);
+      
     }
 
   });
@@ -71,4 +75,10 @@ function endGame() {
   hideScene(game);
   hideScene(splashScreen);
   showScene(game_over);
+}
+
+function hideVideo(){
+  //alert("inside hide")
+  //$("#video").hide()
+  document.getElementById("video").style.display = "none"
 }

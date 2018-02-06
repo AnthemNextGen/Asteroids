@@ -7,4 +7,8 @@ beforeEach(function() {
      canvas.id = 'splash';
      document.body.appendChild(canvas);
      splashScreen = document.getElementById(canvas.id);
+     videoTag = document.createElement('video')
+     videoTag.id = 'video'
+     document.body.appendChild(videoTag)
+     video = document.getElementById('video')
  });
