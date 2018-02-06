@@ -17,6 +17,3 @@ video{
   width: 100%;
   z-index: -1
 }
-.youtube-page{
-  position: fixed; z-index: -99; width: 100%; height: 100%
-}

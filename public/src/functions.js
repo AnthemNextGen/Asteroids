@@ -8,6 +8,10 @@ function showScene(scene){
 
 }
 
+ function hideElement(video){
+video.style.display = 'none'
+ }
+
 var x = 200;
 function animate(){
   var ctx = requestContext(splashScreen);

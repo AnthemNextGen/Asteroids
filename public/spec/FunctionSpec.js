@@ -19,6 +19,10 @@ describe('Should test all Splash screen components', function(){
   it('Pause Music', function () {
     expect(pauseMusic(url)).toBeTruthy();
   });
+  it('hideVideo', function(){
+    hideElement(video);
+    expect(document.getElementById("video").style.display).toBe("none")
+  })
 
 });
 
