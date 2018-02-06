@@ -41,7 +41,7 @@ function initScene(scene) {
     if (event.keyCode == 32) {
       hideScene(scene);
       showScene(game);
-      hideElement(video)
+      hideElement(video);
       StartGame(game);
       
     }
