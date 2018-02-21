@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Template</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+		<div class='splash screen hidden'>
+		  <div id="splash">
+		    <!-- <div id="musicDiv">
+		      <button id="play"><img src="assets/pauseVolumeIcon.png"  height="40" width="40"></button>
+		    </div>
+		    <video id="video" class="video-page" poster="" src="assets/giphy.mp4" type="video/mp4" display="none" autoplay="true" loop></video> -->
+		    <div id="title">NextGen Asteroids</div>
+		    <div id="welcome">Welcome!</div>
+
+		    <div id="tableDiv">
+		      <table>
+		        <tr>
+		          <td>
+		            <button id="publicButton" class="menuButton">PUBLIC</button>
+		          </td>
+		          <td>
+		            <button id="privateButton" class="menuButton">PRIVATE</button>
+		          </td>
+		        </tr>
+		        <tr>
+		          <td colspan = "2">
+		          <div  id="codeDiv">
+		          <input id="codeInput" type="text" placeholder="GAME CODE">
+		          </div>
+		        </td>
+		        </tr>
+		      </table>
+		    </div>
+		    <div id="startPrompt">Press ENTER to Start</div>
+		    <div id="copyright">copyright © 2018, NextGen Broker Team</div>
+		  </div>
+		</div>
+
+
+		<div class='game screen hidden'>
+		  <h1>GAME</h1>
+		  <canvas id="gameCanvas" width="500" height="500"></canvas>
+		</div>
+		<div class='over screen hidden'>
+		  <h1>OVER</h1>
+		</div>
+
+
+	<script src="js/game.bundle.js"></script>
+</body>
+</html>

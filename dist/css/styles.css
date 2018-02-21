@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#gameCanvas {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+html{
+  font-size: calc(0.85em + 1vw);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#title{
+  display: "none";
+  font-family: "Lucida Console", "Arial";
+  text-align: center;
+  padding: 5% 2% 2% 0%;
+  font-size: 8vw;
+  color: #000000;
+  -webkit-text-stroke: 3px white;
+  animation: fadeIn 5s;
+}
+
+#welcome{
+  font-family: "Lucida Console", "Arial";
+  text-align: center;
+  padding: 2% 0% 5% 0%;
+  font-size: 6vw;
+  color: #000000;
+  -webkit-text-stroke: 2px white;
+  animation: fadeIn 15s;
+}
+
+#tableDiv{
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+table {
+  width: 100%;
+}
+
+#codeDiv {
+  display: none;
+}
+
+.menuButton{
+  background-color: rgba(255, 255, 255, 0.00);
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 1vw 5vw;
+  font-family: "Lucida Console", "Arial";
+  font-size: 2vw;
+  animation: fadeIn 10s;
+}
+
+.menuButton:hover{
+  background-color: rgba(255, 238, 0, 0.308);
+}
+
+.menuButton:focus {
+  outline: none;
+  border: 2px solid rgb(255, 238, 0);
+}
+
+
+#startPrompt{
+  font-family: "Lucida Console", "Arial";
+  text-align: center;
+  padding: 10% 0% 0% 0%;
+  font-size: 2vw;
+  color: #000000;
+  -webkit-text-stroke: 1px white;
+  animation: delayedFadeIn 5s;
+}
+
+#copyright{
+  font-family: "Lucida Console", "Arial";
+  text-align: center;
+  margin: 10% 0% 0% 0%;
+  font-size: 1.2vw;
+  color: #000000;
+  -webkit-text-stroke: 0.5px white;
+  animation: fadeIn 10s;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+video{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width:100%;
+  min-height:100%;
+  object-fit: cover;
+}
+
+.video-page{
+  position: fixed;
+  width: 100%;
+  z-index: -1
+}
+
+.fadesplash{
+  animation: drawback 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delayedFadeIn {
+0% {
+  opacity: 0;
+}
+75% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
+
+@keyframes drawback{
+  0%{
+    transform : scale(1.1);
+  }
+  20%{
+    transform: scale(0.8);
+  }
+  50%{
+    opacity: 0.6;
+    transform: scale(0.5);
+  }
+  90%{
+    transform: scale(0.1);
+    opacity: 0.2;
+  }
+
+  100%{
+    opacity: 0;
+    transform: scale(0);
+    display: none;
+  }}
+
+  #musicDiv {
+    position:fixed; 
+    bottom:0; 
+    right:0;
+  }

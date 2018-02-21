@@ -1,18 +1,25 @@
 {
-  "name": "asteroids",
+  "name": "Asteroid NextGen Game",
   "version": "1.0.0",
-  "description": "A Multiplayer version of the Asteroid game",
-  "main": "index.js",
+  "description": "",
+  "main": "webpack.config.js",
   "scripts": {
-    "unittest": "jasmine",
-    "start": "start http://localhost:3000 & node index.js",
-    "test": "start http://localhost:3000/SpecRunner.html & node index.js"
+    "start": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Anthem NextGen",
+  "keywords": [],
+  "author": "Anthem NextGen Team",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
-    "jasmine": "^2.9.0",
-    "socket.io": "latest"
+    "gsap": "^1.19.1",
+    "normalize-css": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "webpack": "^2.5.1"
   }
 }
